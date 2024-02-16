@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>Hello world</h3>
+    <h2></h2>
+
+    <ul class="ul">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+    <script>
+        console.log(document.body.children)
+        console.log(document.body.childNodes)
+
+        document.body.children[0].textContent= "children (DOM)";
+        document.body.childNodes[3].textContent= "childNodes (DOM)";
+        var h3 = document.createElement("h3");
+        var h3content = document.createTextNode("insertAdjacentHTML");
+        h3.appendChild(h3content)
+        
+        document.querySelector(".ul").insertAdjacentElement("beforebegin", h3);
+
+
+        var h4 = "<h4>insertAdjacentHTML</h4>"
+
+        document.querySelector(".ul").insertAdjacentHTML("afterend", h4);
+
+        var p = document.createElement("p");
+        var pcontent = document.createTextNode("Insertbefor");
+        p.appendChild(pcontent);
+         var list = document.querySelector(".ul");
+
+        list.insertBefore(p, list.children[1])
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #dompic{
+            height: 150px;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Explain DOM Traversal</h1>
+    <p>DOM (Document Object Model) is a tree like structure hierarchy that represents HTML elements. DOM Traversal is a concept in which we navigate and manuplate HTML elements using DOM. 
+    <br> <br><br>
+    <img src="dom_tree.gif"  id="dompic" alt="dom_tree">
+    <br><br>
+    This is the basic DOM version of a HTML code, In DOM traversal we navigate and access any of the element using multiple ways and manuplate elements in runtime.
+    </p>
+    <!-- 1st assignment ENDED -->
+
+
+    <h1>Difference between document.children and Other Selection Methods:</h1>
+
+
+<p>
+ There are many ways of selecting or navigating thoughout the elements, document.children returns a HTMLcollection in which there are only HTML elements while in the otherways the the result could be different.
+ <br>
+ For Example: <br>
+ <ul>
+      <li> <strong>document.body.children :</strong> Returns All HTML elements.</li>
+      <li> <strong>document.body.childNodes :</strong> Returns all Nodes icluding text and comment.</li>
+      <li> <strong>document.body.firstChild :</strong> Returns only first childNode wheather it is a text node or an Element.</li>
+     <li><strong> document.body.firstElementChild :</strong> Returns only first HTML Element</li>
+    </ul>
+
+</p>
+    <!-- 2nd assignment ENDED -->
+
+
+    <h1 >Difference Between append and appendChild Method</h1>
+    <p>Difference between <strong>append & appendChild</strong>  is if we use appendChild it becomes a <Strong>childNode </Strong>of that particular element we want to add with and we cant add otherthan an element,
+    while using <strong>append</strong> we can also append a string.  </p>
+    <!-- 3rd assignment ENDED -->
+    
+
+
+
+<h1>
+    Differences Between append, insertBefore, and insertAdjacentHTML
+</h1>
+<p>
+   using <strong>append</strong> we can add strings to an element, <br><strong>insertBefore</strong> is used when we want to add an element on a a prticular place,and <br><strong>insertAdjacentHTML</strong> have four parameters <br><strong>beforeBegin</strong>,<br><strong>afterBegin</strong>,<br><strong>beforeEnd</strong>,<br><strong>beforeEnd</strong> <br>We can only add elements on places which are provided.
+</p>
+    <!-- 4th assignment ENDED -->
+
+
+
+    <h1>Difference Between insertAdjacentHTML, insertAdjacentText, and insertAdjacentElement</h1>
+
+    <ul>
+        <li><strong>insertAdjacentHTML :</strong>Used to add HTML code | i.e: Tags. </li>
+        <li><strong>insertAdjacentText :</strong>Used to create a textnode and add to particular place.</li>
+        <li><strong>insertAdjacentElement :</strong> Also used to add an element to a given postition.</li>
+    </ul>
+    <!-- 5th assignment ENDED -->
+
+
+
+    <h1>Create a DOM Project Incorporating Learned Concepts:
+
+    </h1>
+<a href="dom.html">Simple DOM Preject</a>
+    <!-- 6th assignment ENDED -->
+
+
+    <h1>Build a Bulb On/Off Project:
+
+    </h1>
+
+    <a href="https://softhanni.github.io/Bulb-On-Off/">Bulb On/Off</a>
+    <!-- 7th assignment ENDED -->
+
+    <h1>Differences Between document.getElementById, tagName, className, querySelector, and querySelectorAll:
+
+    </h1>
+    <ul>
+        <li><strong>document.getElementById:</strong>Select an element by its idName in DOM.</li><br>
+        <li><strong>tagName:</strong>Directly select Elements with their name also called typeSelector in CSS.</li><br>
+        <li><strong>className:</strong>Selects an element with className.</li><br>
+        <li><strong>querySelector:</strong> Uses <strong>CSS</strong> Properties to select elements in DOM.</li><br>
+        <li><strong>querySelectorAll:</strong>Also use <strong>CSS</strong> properties to select all elements with a particuler name or class</li>
+    </ul>
+    <!-- 8th assignment ENDED -->
+
+    <h1>Why don't we directly access elements using only id:
+
+    </h1>
+    <p>
+        Tt's not always ideal to exclusively use IDs for accessing elements directly because IDs suppossed to be unique and but if there are more than one IDs with same name that may cause unexpacted output.
+    </p>
+    <script>
+        
+        var p = document.createElement("p");
+        var c = document.createTextNode("hello");
+        p.appendChild(c)
+        document.querySelector("#ul").append("hello");
+        
+        
+        
+    </script>
+</body>
+</html>
